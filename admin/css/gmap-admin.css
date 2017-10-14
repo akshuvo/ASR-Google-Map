@@ -1,0 +1,105 @@
+/*layout*/
+
+.col-sm-6 {
+    width: 50%;
+    float: left;
+    position: relative;
+}
+
+div#gmap-meta-box {
+    overflow: hidden;
+}
+
+.quantity {
+    position: absolute;
+    width: 130px;
+    left: 30px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.quantity input {
+    width: 64px;
+    height: 50px;
+    float: left;
+    display: block;
+    padding: 0 20px;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.quantity input:focus {
+    outline: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.quantity-nav {
+    float: left;
+    position: relative;
+    height: 42px;
+}
+
+.quantity-button {
+    cursor: pointer;
+    width: 20px;
+    text-align: center;
+    color: #4e4e4e;
+    font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.quantity-button.quantity-up {
+    position: absolute;
+    right: 0;
+    font-size: 26px;
+    line-height: 1;
+    background: #f7f7f7;
+    padding: 12px 6px;
+}
+
+.quantity-button.quantity-down {
+    position: absolute;
+    left: 0;
+    font-size: 26px;
+    line-height: 1;
+    background: #f7f7f7;
+    padding: 12px 6px;
+}
+
+.map-setting input[type=text] {
+    width: 100%;
+    margin: 6px 0;
+}
+
+.map-setting input[type=text] {
+    width: 100%;
+    margin: 6px 0;
+}
+
+.meta-row.row {
+    margin: 0px 15px 15px 0px !important;
+}
+
+.map-setting label {
+    font-weight: bold;
+}
+
+
+/*Hide Div(s) on editing page*/
+
