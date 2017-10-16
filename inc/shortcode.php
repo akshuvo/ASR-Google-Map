@@ -3,7 +3,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
 * Add Shortcode 
 */
-function gmap_shortcode( $atts ){	
+function asrgm_shortcode( $atts ){	
 	$atts= shortcode_atts( array(
 			'id' => '',	
 			'width' => '100%',	
@@ -43,4 +43,4 @@ function gmap_shortcode( $atts ){
 	<?php return ob_get_clean();
 }
 
-add_shortcode('gmp', 'gmap_shortcode');
+add_shortcode('gmp', 'asrgm_shortcode');

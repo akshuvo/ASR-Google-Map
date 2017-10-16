@@ -5,27 +5,27 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * Register Shortcode meta box.
  */
-function amp_cmb() {
-    add_meta_box( 'gmap-shortcode-box', __( 'Shortcode', 'asr_td' ), 'shortcode_display_callback', 'gmap-pro','side','high' );
+function asrgm_cmb() {
+    add_meta_box( 'gmap-shortcode-box', __( 'Shortcode', 'asr_td' ), 'asrgm_shortcode_display_callback', 'gmap-pro','side','high' );
 }
-add_action( 'add_meta_boxes', 'amp_cmb' );
+add_action( 'add_meta_boxes', 'asrgm_cmb' );
 
 /**
  * Meta box display callback.
  *
  * @param WP_Post $post Current post object.
  */
-function shortcode_display_callback( $post ) {
+function asrgm_shortcode_display_callback( $post ) {
 	echo '<strong>Use this shortcode for display the map anywhere</strong><br /><br /><center>[gmp id='.get_the_ID().']</center><br />';
 }
 
 /**
  * Register meta box(es).
  */
-function wpdocs_register_meta_boxes() {
-    add_meta_box( 'gmap-meta-box', __( 'Map Settings', 'asr_td' ), 'wpdocs_my_display_callback', 'gmap-pro','normal','core' );
+function asrgm_register_meta_boxes() {
+    add_meta_box( 'gmap-meta-box', __( 'Map Settings', 'asr_td' ), 'asrgm_my_display_callback', 'gmap-pro','normal','core' );
 }
-add_action( 'add_meta_boxes', 'wpdocs_register_meta_boxes' );
+add_action( 'add_meta_boxes', 'asrgm_register_meta_boxes' );
 
  
 /**
@@ -33,7 +33,7 @@ add_action( 'add_meta_boxes', 'wpdocs_register_meta_boxes' );
  *
  * @param WP_Post $post Current post object.
  */
-function wpdocs_my_display_callback( $post ) {
+function asrgm_my_display_callback( $post ) {
 
 	wp_nonce_field( basename( __FILE__ ), 'asr_jobs_nonce' );
 	$asr_stored_meta = get_post_meta( $post->ID ); ?>

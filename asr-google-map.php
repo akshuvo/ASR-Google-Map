@@ -39,15 +39,15 @@ require_once( 'inc/meta-boxes.php' );
 /**
 *Plugin Scripts
 */
-function asr_gmap_front_enqueue_scripts() {   	
+function asrgm_gmap_front_enqueue_scripts() {   	
     wp_enqueue_script( 'asr-gmp-api', 'https://maps.googleapis.com/maps/api/js?key='.get_option('asr_gmap_api').'&callback=initMap',array(),'1.0',true );
 }
-add_action('wp_enqueue_scripts', 'asr_gmap_front_enqueue_scripts');
+add_action('wp_enqueue_scripts', 'asrgm_gmap_front_enqueue_scripts');
 
 /**
 *Admin Scripts
 */
-function asr_gmap_admin_enqueue_scripts() {   
+function asrgm_gmap_admin_enqueue_scripts() {   
 	if ( 'gmap-pro' == get_post_type() ){	// work only Google Map Setting Page	
 		//Enqueue Css(s)
 		wp_enqueue_style( 'gmap-stylesheet', plugin_dir_url(__FILE__).'admin/css/gmap-main.css',array(),'1.0' );
@@ -58,4 +58,4 @@ function asr_gmap_admin_enqueue_scripts() {
 		wp_enqueue_script( 'gmap-scripts', plugin_dir_url(__FILE__).'admin/js/gmap-scripts.js',array('jquery'),'1.0',true );
 	}
 }
-add_action('admin_enqueue_scripts', 'asr_gmap_admin_enqueue_scripts');
+add_action('admin_enqueue_scripts', 'asrgm_gmap_admin_enqueue_scripts');

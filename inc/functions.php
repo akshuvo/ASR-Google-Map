@@ -6,8 +6,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
 * Add Custom post Type
 */
-if(!function_exists('agm_cpt')){	
-	function agm_cpt(){
+if(!function_exists('asrgm_cpt')){	
+	function asrgm_cpt(){
 		register_post_type('gmap-pro',[
 			'labels'      => [
                 'name'          => __('Google Maps'),
@@ -28,7 +28,7 @@ if(!function_exists('agm_cpt')){
 			'supports' => ('title'),
 		]);
 	}
-	add_action('init', 'agm_cpt');
+	add_action('init', 'asrgm_cpt');
 }
 
 /*
@@ -77,12 +77,12 @@ function agm_add_submenu_page() {
 		'Map Setting', 
 		'manage_options', 
 		'setting', 
-		'asr_settings_callback' 
+		'asrgm_settings_callback' 
 	);
 }
 add_action( 'admin_menu', 'agm_add_submenu_page' );
 
-function asr_settings_callback(){ ?>
+function asrgm_settings_callback(){ ?>
 <div class="wrap">
 <h1>Google Map Pro by ASRCODER™</h1>
 
@@ -107,8 +107,8 @@ function asr_settings_callback(){ ?>
 <?php }
 
 
-function register_asr_plugin_settings() {
+function register_asrgm_plugin_settings() {
 	//register our settings
 	register_setting( 'asr-plugin-settings-group', 'asr_gmap_api' );
 }
-add_action( 'admin_init', 'register_asr_plugin_settings' );
+add_action( 'admin_init', 'register_asrgm_plugin_settings' );
